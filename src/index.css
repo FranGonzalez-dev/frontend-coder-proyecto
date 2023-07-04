@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.products {
+    width: 100%;
+    max-width: 900px;
+    margin: 20px auto;
+    display: grid;
+    padding: 0 1rem;
+    grid-template-columns: repeat(
+        auto-fill,
+        minmax(220px, 1fr)
+    );
+    gap: 10px;
+}

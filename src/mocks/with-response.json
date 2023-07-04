@@ -1,0 +1,75 @@
+{
+    "data": {
+      "docs": [
+        {
+          "_id": "645d412ee00785c5e90450f4",
+          "title": "Camiseta Juventus TEAMGEIST",
+          "description": "Captura el espíritu del deporte de masas. Esta camiseta de fútbol de la Juventus rinde homenaje a los 15 años de historia del balón adidas Teamgeist. La estética de líneas clásicas y los detalles curvados de malla te teletransportan al mágico verano de 2006. Los logotipos de adidas y Teamgeist y su corte holgado te garantizan un estilo deportivo auténtico. El escudo de la Juventus bordado le aporta un toque elegante.",
+          "price": 16900,
+          "thumbnail": "https://frangonzalez-dev.github.io/camisetas-repo/juventus_teamgeist.webp",
+          "stock": 18,
+          "__v": 0,
+          "id": "645d412ee00785c5e90450f4"
+        },
+        {
+          "_id": "645d41a4e00785c5e9045101",
+          "title": "Camiseta Arsenal Suplente",
+          "description": "Desde el escudo del cañón, al detalle inspirado en las esculturas de concreto, hasta el ribete color bronce; esta camiseta de fútbol adidas del Arsenal viene cargada con referencias al Emirates Stadium. No importa lo que tengas planeado para el día del partido, esta camiseta para hinchas te da la comodidad que necesitás gracias al tejido absorbente AEROREADY y a los paneles de malla.",
+          "price": 24999,
+          "thumbnail": "https://frangonzalez-dev.github.io/camisetas-repo/arsenal_suplente.webp",
+          "stock": 10,
+          "__v": 0,
+          "id": "645d41a4e00785c5e9045101"
+        },
+        {
+          "_id": "645d41fae00785c5e9045104",
+          "title": "Camiseta Arsenal Titular",
+          "description": "Indiscutiblemente Arsenal. El cuello de chomba blanco de esta camiseta de titular adidas proyecta una vibra de los 90s. El lema \"Arsenal\" bajo la nuca rinde homenaje a la imponente escultura situada en las inmediaciones del Emirates Stadium. Los paneles de malla bajo los brazos y la tecnología de absorción AEROREADY se combinan para ofrecerles comodidad a los hinchas del club.",
+          "price": 24999,
+          "thumbnail": "https://frangonzalez-dev.github.io/camisetas-repo/arsenal_titular.webp",
+          "stock": 10,
+          "__v": 0,
+          "id": "645d41fae00785c5e9045104"
+        },
+        {
+          "_id": "645d423ee00785c5e9045107",
+          "title": "Camiseta Juventus Titular",
+          "description": "Durante su historia repleta de trofeos, las estrellas se han convertido en una parte tan importante de la identidad de la Juventus como las rayas. Esta camiseta de fútbol oficial adidas une ambas cosas, formando las icónicas rayas negras del club a partir de los pequeños símbolos en forma de estrella. La tecnología de ventilación HEAT.RDY mantiene la piel fresca y seca en todo momento. Los detalles termotransferidos reducen el peso al mínimo.",
+          "price": 39999,
+          "thumbnail": "https://frangonzalez-dev.github.io/camisetas-repo/juventus_titular.webp",
+          "stock": 10,
+          "__v": 0,
+          "id": "645d423ee00785c5e9045107"
+        },
+        {
+          "_id": "645d42abe00785c5e904510a",
+          "title": "Camiseta Arsenal Tercera",
+          "description": "Indiscutiblemente Arsenal. El cuello de chomba blanco de esta camiseta de titular adidas proyecta una vibra de los 90s. El lema \"Arsenal\" bajo la nuca rinde homenaje a la imponente escultura situada en las inmediaciones del Emirates Stadium. Los paneles de malla bajo los brazos y la tecnología de absorción AEROREADY se combinan para ofrecerles comodidad a los hinchas del club.",
+          "price": 24999,
+          "thumbnail": "https://frangonzalez-dev.github.io/camisetas-repo/arsenal_tercera.jpg",
+          "stock": 10,
+          "__v": 0,
+          "id": "645d42abe00785c5e904510a"
+        },
+        {
+          "_id": "645d42f3e00785c5e904510d",
+          "title": "Camiseta Ajax Titular",
+          "description": "Un uniforme clásico para un club de fútbol con clase. Manteniéndose fiel al rico legado del Ajax de Amsterdam, esta camiseta titular adidas conserva un look atemporal. Una segunda mirada revela detalles de finas rayas y hebras de oro que celebran una historia de éxito resplandeciente. Diseñada para jugadores e hinchas, esta camiseta brinda comodidad en todo momento gracias a sus paneles de malla y tecnología de absorción AEROREADY.",
+          "price": 24999,
+          "thumbnail": "https://frangonzalez-dev.github.io/camisetas-repo/ajax_titular.webp",
+          "stock": 10,
+          "__v": 0,
+          "id": "645d42f3e00785c5e904510d"
+        }
+      ],
+      "totalDocs": 19,
+      "limit": 6,
+      "totalPages": 4,
+      "page": 1,
+      "pagingCounter": 1,
+      "hasPrevPage": false,
+      "hasNextPage": true,
+      "prevPage": null,
+      "nextPage": 2
+    }
+  }
