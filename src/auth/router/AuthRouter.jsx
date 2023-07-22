@@ -1,6 +1,7 @@
 import { Navigate, Route, Routes } from 'react-router-dom'
 import { LoginView, RegisterView } from '../views'
 
+
 export const AuthRouter = () => {
     return (
         <Routes>

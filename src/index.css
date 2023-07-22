@@ -15,3 +15,7 @@
     );
     gap: 10px;
 }
+
+.product-image {
+    height: 282px;
+}

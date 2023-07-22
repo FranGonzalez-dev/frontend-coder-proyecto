@@ -1,1 +1,6 @@
 export * from './home/Home'
+export * from './product/Product'
+export * from './cart/Cart'
+export * from './controlPanel/ControlPanel'
+export * from './controlPanel/AddNewProduct'
+export * from './controlPanel/UpdateProduct'

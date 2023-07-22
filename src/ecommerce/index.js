@@ -2,4 +2,4 @@
 export * from './views'
 
 /*      Router     */
-// export * from './router/EcommerceRouter'
+export * from './router/EcommerceRouter'
