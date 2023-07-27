@@ -63,7 +63,7 @@ export const LoginView = () => {
                     placeholder='Contraseña'
                     required
                 />
-                <button type='submit' className='btn btn-primary text-primary hover:text-base-100'>
+                <button type='submit' className='btn btn-primary'>
                     Ingresar
                 </button>
             </form>

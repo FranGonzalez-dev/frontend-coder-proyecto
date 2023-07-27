@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom"
 import { useAuthStore, useCartStore } from "../../hooks"
-import Swal from "sweetalert2";
 
 
 export const Card = ({ _id, thumbnail, title, price }) => {
@@ -20,7 +19,7 @@ export const Card = ({ _id, thumbnail, title, price }) => {
                 <p className='text-md font-bold mb-2'>${ price }</p>
                 {
                     user?.role === 'user' &&
-                    <button className="btn btn-neutral normal-case w-full" onClick={ async () => await addToCart( product ) }>
+                    <button className="btn btn-neutral normal-case w-full" onClick={ async () => await addToCart( _id ) }>
                         Añadir al carrito
                     </button>
                 }

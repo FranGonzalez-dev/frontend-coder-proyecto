@@ -11,7 +11,7 @@ export const CartIcon = () => {
 
     useEffect(() => {
         getCart()
-    }, [cart]);
+    }, []);
 
     
     return (    
@@ -19,9 +19,9 @@ export const CartIcon = () => {
             <div className="indicator">
                 <i className="ri-shopping-cart-2-line font-normal text-2xl"/>
                 { 
-                    cart == 'no-data'
-                    ? null
-                    : <span className="badge badge-sm indicator-item">{ cart?.length }</span>
+                    cart.length > 0
+                    ? <span className="badge badge-sm indicator-item">{ cart?.length }</span>
+                    : null
                 }
             </div>
         </Link>

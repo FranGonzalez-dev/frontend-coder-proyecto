@@ -1,8 +1,7 @@
-import { useEffect } from "react"
+import { useNavigate } from "react-router-dom"
 import { FormContainer } from "../../"
 import { useAuthStore, useForm } from "../../../hooks"
 import Swal from "sweetalert2"
-import { useNavigate } from "react-router-dom"
 
 
 const formFields = {
@@ -91,7 +90,7 @@ export const RegisterView = () => {
                     placeholder='Contraseña'
                     required
                 />
-                <button type='submit' className='btn btn-primary text-primary hover:text-base-100'>
+                <button type='submit' className='btn btn-primary'>
                     Registrar
                 </button>
             </form>

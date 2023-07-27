@@ -41,10 +41,19 @@ export const useProductsStore = () => {
         }
     }
 
+    const createProduct = async ({ title, thumbnail, price, stock, description }) => {
+        try {
+            await ecommerceApi.post('/products', { title, thumbnail, price, stock, description })
+            await startLoadingProducts()
+        } catch (error) {
+            console.log(error.message)
+        }
+    }
+
     return {
         // Propiedades
         products, isLoadingProducts, selectedProduct, isLoadingSelectedProduct,
         // Métodos
-        startLoadingProducts, getProductById, startSavingProduct
+        startLoadingProducts, getProductById, startSavingProduct, createProduct
     }
 }

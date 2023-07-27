@@ -5,16 +5,14 @@ export const cartsSlice = createSlice({
     initialState: {
         isLoadingCart: true,
         cart: [],
-        cid: null   //cart id
     },
     reducers: {
         onLoadCart: ( state, { payload }) => {
-            state.cart = payload.result;
-            state.cid = payload.cid
+            state.cart = payload.result.products;
             state.isLoadingCart = false
         },
         onAddToCart: ( state, { payload }) => {
-            state.cart.products.push( payload );
+            console.log(payload)
         },
         onCleanCart: ( state ) => {
             state.cart = []
@@ -23,4 +21,4 @@ export const cartsSlice = createSlice({
 });
 
 
-export const { onLoadCart, onAddToCart, onCleanCart, cid } = cartsSlice.actions;
+export const { onLoadCart, onAddToCart, onCleanCart } = cartsSlice.actions;

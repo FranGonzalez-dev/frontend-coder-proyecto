@@ -8,32 +8,12 @@ export const Cart = () =>{
 
     const { cart, deleteFromCart, getCart, cleanCart, purchaseProducts } = useCartStore()
 
-    const onDeleteFromCart = async ( id ) => {
-        await deleteFromCart( id )
-        Swal.fire({
-            title: 'Producto eliminado del carrito',
-            icon: 'success',
-            showConfirmButton: false,
-            timer: 1000
-        })
-    }
-
-    const onCleanCart = async () => {
-        await cleanCart()
-        Swal.fire({
-            title: 'Carrito vaciado.',
-            icon: 'success',
-            showConfirmButton: false,
-            timer: 1000
-        })
-    }
-
     useEffect(() => {
         getCart()
-    }, [cart]);
-
+    }, []);
+    
     return (
-        <section className="p-2 flex flex-col justify-center items-center w-full min-h-screen" style={{ maxWidth: '900px' }}>
+        <section className="p-2 flex flex-col justify-center items-center w-full min-h-screen animate__animated animate__fadeIn" style={{ maxWidth: '900px' }}>
             
             {
                 cart === 'no-data' || cart.length === 0
@@ -48,7 +28,7 @@ export const Cart = () =>{
                         Carrito
                     </h1>
                     <div className="self-end my-4 flex flex-row gap-2">
-                        <button className="btn btn-error" onClick={ () => onCleanCart() }>
+                        <button className="btn btn-error" onClick={ async () => await cleanCart() }>
                             Vaciar carrito
                         </button>
                         <button className="btn btn-success" onClick={ purchaseProducts }>
@@ -67,19 +47,21 @@ export const Cart = () =>{
                             </tr>
                         </thead>
                         <tbody>
-                            { cart?.products?.map( item  => (
-                                <tr key={item._id}>
+
+
+                            { cart?.map( item  => (
+                                <tr key={ item.product?._id }>
                                     <td className="avatar">
                                         <div className="mask mask-squircle w-12 h-12">
-                                            <img src={ item.product.thumbnail } alt={ item.product.title }/>
+                                            <img src={ item.product?.thumbnail } alt={ item.product?.title }/>
                                         </div>
                                     </td>
-                                    <td>{ item.product.title }</td>
+                                    <td>{ item.product?.title }</td>
                                     <td>{ item.quantity }</td>
-                                    <td>{ item.product.price }</td>
+                                    <td>{ item.product?.price }</td>
                                     <td>{ item.totalPrice }</td>
                                     <td>
-                                        <button onClick={ () => onDeleteFromCart( item.product._id ) } className="btn btn-outline btn-error">
+                                        <button onClick={ async () => await deleteFromCart( item.product?._id ) } className="btn btn-outline btn-error">
                                             <i className="ri-delete-bin-6-fill"></i>
                                         </button>
                                     </td>

@@ -9,6 +9,7 @@ export const store = configureStore({
         carts: cartsSlice.reducer
     },
     middleware: (getDefaultMiddleware) => getDefaultMiddleware({
-        serializableCheck: false
+        serializableCheck: false,
+        inmutableCheck: false      
     })
 })

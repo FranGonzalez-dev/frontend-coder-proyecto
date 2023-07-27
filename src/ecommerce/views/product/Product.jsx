@@ -61,7 +61,7 @@ export const Product =  () => {
 
                         {
                             user?.role === 'user' && 
-                            <button className="btn btn-neutral normal-case btn-wide" onClick={ () => onAddToCart( selectedProduct )}>
+                            <button className="btn btn-neutral normal-case btn-wide" onClick={ () => onAddToCart( selectedProduct._id )}>
                                 Añadir al carrito
                             </button>
                         }
