@@ -50,6 +50,14 @@ export const useProductsStore = () => {
         }
     }
 
+    const deleteProduct = async ({ id }) => {
+        try {
+            await ecommerceApi.delete(`/products/${ id }`)
+        } catch ( error ) {
+            console.log( error.message )
+        }
+    }
+
     return {
         // Propiedades
         products, isLoadingProducts, selectedProduct, isLoadingSelectedProduct,

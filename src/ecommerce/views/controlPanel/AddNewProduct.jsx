@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom"
-import { FormContainer } from "../../../auth"
+import { FormContainer } from "../../../layout"
 import { useForm, useProductsStore } from "../../../hooks"
 import Swal from "sweetalert2"
 

@@ -1,6 +1,6 @@
 import { useEffect } from "react";
-import { useCartStore } from "../../../hooks"
-import Swal from "sweetalert2";
+import { useCartStore } from "../../hooks"
+
 
 
 

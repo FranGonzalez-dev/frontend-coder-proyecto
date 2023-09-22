@@ -6,7 +6,7 @@ import { useAuthStore } from "../../hooks"
 
 const NavLink = ({ text, link }) => {
     return (
-        <Link className="btn btn-ghost text-sm normal-case" to={ link }>
+        <Link className="btn btn-ghost h-9 text-sm normal-case" to={ link }>
             { text }
         </Link>
     )
@@ -21,9 +21,12 @@ export const Navbar = () => {
     }, []);
 
     return (
-        <header className="navbar bg-base-100 top-0 fixed px-4 w-full z-10">
+        <header className="navbar bg-base-100 top-0 fixed h-12 w-full z-10 px-4">
             <article className="flex-1">
-                <Link className="btn btn-ghost normal-case text-xl" to='/products' title="Ir al inicio" children='Store'/>
+                <Link className="btn btn-ghost h-9 normal-case text-lg" to='/products' title="Ir al inicio">
+                    <i className="ri-store-2-line font-normal"/>
+                    Store
+                </Link>
             </article>
             <nav className="flex gap-2">
                 <NavLink text='Inicio' link='/products'/>

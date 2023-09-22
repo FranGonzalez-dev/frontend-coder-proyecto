@@ -1,6 +1,7 @@
+import { Link } from "react-router-dom"
 import { useEffect } from "react"
-import { useAuthStore, useForm } from '../../../hooks'
-import { FormContainer } from "../../components"
+import { useAuthStore, useForm } from '../../hooks'
+import { FormContainer, FormInput } from "../../layout"
 import Swal from "sweetalert2"
 
 import { useNavigate } from "react-router-dom"
@@ -10,7 +11,7 @@ const loginFormFields = {
     password: '',
 }
 
-export const LoginView = () => {
+export const Login = () => {
 
     const { startLogin, errorMessage } = useAuthStore();
     const { email, password, onInputChange } = useForm( loginFormFields )
@@ -43,32 +44,19 @@ export const LoginView = () => {
     }, [errorMessage])
 
     return (
-        <FormContainer title='Iniciar sesión' text="¿Nuevo en este lugar?" highlight="Crea una cuenta." link="/auth/register">
-            <form className='w-full flex flex-col gap-8' onSubmit={ loginSubmit }>
-                <input 
-                    type='email'
-                    name='email'
-                    value={ email } 
-                    onChange={ onInputChange } 
-                    className='input input-bordered w-full'
-                    placeholder='Email'
-                    required
-                />
-                <input 
-                    type='password'
-                    name='password'
-                    value={ password }
-                    onChange={ onInputChange } 
-                    className='input input-bordered w-full'
-                    placeholder='Contraseña'
-                    required
-                />
+        <FormContainer title='¡Bienvenido otra vez!' text="¿Nuevo en este lugar?" highlight="Crea una cuenta." link="/auth/register">
+            <form className='w-full flex flex-col gap-4' onSubmit={ loginSubmit }>
+                <FormInput type='email' name='email' value={email} action={ onInputChange } placeholder='Email'/>
+                <FormInput type='password' name='password' value={password} action={ onInputChange } placeholder='Contraseña'/>
+
+                <Link to='/auth/renew-password' className="text-sm text-right link link-hover" children='Olvidé mi contraseña'/>
+
                 <button type='submit' className='btn btn-primary'>
                     Ingresar
                 </button>
             </form>
-            <div className='divider'> O </div>
-            <a href='/sessions/github' className='btn btn-neutral'> Ingresa con Github </a>
+            <div className='divider text-sm font-thin uppercase'> o ingresa con </div>
+            <a href='/sessions/github' className='btn btn-neutral'> Github </a>
         </FormContainer>
     )
 }

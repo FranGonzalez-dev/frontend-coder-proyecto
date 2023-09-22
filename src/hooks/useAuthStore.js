@@ -1,10 +1,14 @@
+import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { ecommerceApi } from '../api'
 import { clearErrorMessage, onChecking, onLogin, onLogout } from '../store'
+import Swal from "sweetalert2";
+import 'sweetalert2/dist/sweetalert2.min.css';
 
 
 export const useAuthStore = () => {
 
+    const navigate = useNavigate()
 
     const { status, user, errorMessage } = useSelector( state => state.auth )
     const dispatch = useDispatch();
@@ -54,15 +58,41 @@ export const useAuthStore = () => {
 
     
 
-    const startLogout = () => {
-        localStorage.clear();
-        dispatch( onLogout() )
+    const logout = () => {
+        try {
+            localStorage.clear()
+            dispatch( onLogout() )
+            Swal.fire({
+                title: `Sesión cerrada.`,
+                icon: 'success',
+                toast: true,
+                position: 'top-right',
+                showConfirmButton: false,
+                background: '#181A2A',
+                color: '#fff',
+                timer: 2000
+            }).then(() => {
+                navigate('/auth/login')
+            })
+        } catch (err) {
+            console.log( err.message )
+            Swal.fire({
+                title: `Error al cerrar sesión.`,
+                icon: 'error',
+                toast: true,
+                position: 'top-right',
+                showConfirmButton: false,
+                background: '#181A2A',
+                color: '#fff',
+                timer: 2000
+            })
+        }
     }
 
     return {
         // Propiedades
         errorMessage, status, user,
         // Métodos
-        startRegister, startLogin, startLogout, checkAuthToken
+        startRegister, startLogin, logout, checkAuthToken
     }
 }

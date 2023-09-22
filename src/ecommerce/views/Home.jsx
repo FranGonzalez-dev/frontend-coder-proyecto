@@ -1,5 +1,5 @@
-import { Card, Loader } from '../../../layout';
-import { useProductsStore } from '../../../hooks';
+import { Card, Loader } from '../../layout';
+import { useProductsStore } from '../../hooks';
 import { useEffect } from 'react';
 
 

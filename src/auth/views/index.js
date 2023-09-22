@@ -1,2 +1,3 @@
-export * from './loginView/LoginView'
-export * from './registerView/RegisterView'
+export * from './Login'
+export * from './Register'
+export * from './RenewPassword'

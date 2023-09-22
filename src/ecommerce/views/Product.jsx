@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
-import { useProductsStore, useCartStore, useAuthStore } from "../../../hooks"
+import { useProductsStore, useCartStore, useAuthStore } from "../../hooks"
 
-import { Loader } from "../../../layout"
+import { Loader } from "../../layout"
 import Swal from "sweetalert2"
 
 export const Product =  () => {
